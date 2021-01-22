@@ -1,0 +1,672 @@
+.container
+{
+  max-width:1180px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0rem 2rem;
+  position: relative;
+}
+
+img{
+  max-width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: $dark-color ;
+}
+
+.w-100
+{
+  width: 100%;
+}
+
+/*----------------Company logo-----------------------*/
+.company-logo
+{
+  text-decoration: none;
+  color: $primary-color;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+/*-----------------colors---------------------*/
+.text-primary
+{
+  color: $primary-color !important;
+}
+
+.text-dark
+{
+  color: $dark-color !important;
+}
+
+.text-light
+{
+  color: $light-color !important;
+}
+
+.text-white
+{
+  color: white !important;
+}
+
+.text-secondary
+{
+  color: $secondary-color !important;
+}
+
+.low-opacity-text
+{
+  opacity: 0.7;
+}
+
+//Divider style (hr)
+
+.divider
+{
+  border-top: 0.5px solid $secondary_color;
+  opacity: 0.2;
+}
+
+//Typography
+
+.text-italic
+{
+  font-style: italic;
+}
+
+.text-uppercase
+{
+  text-transform: uppercase !important;
+}
+
+.lg-heading
+{
+  // font-size: calc(1.300rem + 1.4vw);
+  font-size: clamp(1.6rem, 3vw , 2.3rem);
+  font-weight: 400;
+  color: heading-color(#fff);
+}
+
+.md-heading
+{
+  font-size: calc(0.8rem + 0.8vw);
+  color: heading-color(#fff);
+  font-weight: 400;
+}
+
+.sm-heading
+{
+  text-transform: capitalize;
+  color: heading-color(#fff);
+  font-size: clamp(0.7rem,3vw,1.05rem);
+  font-weight: 400;
+}
+
+.lead
+{
+  color: text-color(#fff);
+  font-size: calc(.75rem + .2vw);
+  max-width: 30rem;
+  line-height: 1.80rem;
+  margin: 1rem 0;
+}
+
+//Btn Styles
+
+.btn
+{
+  display: inline-block;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  text-decoration: none;
+  @include easeOut;
+}
+
+.btn-lg
+{
+  padding: 0.7rem 2.5rem;
+}
+
+.btn-primary
+{
+  color: text-color($primary-color);
+  background-color: $primary-color;
+  padding: 0.7rem 1.5rem;
+  @include easeOut;
+
+  &:hover
+  {
+    background-color: #1479a1;
+  }
+}
+
+.btn-white
+{
+  color: text-color(#fff);
+  background-color: #fff;
+  padding: 0.7rem 1.5rem;
+
+  &:hover
+  {
+    background-color: rgb(236, 234, 234);
+  }
+}
+
+.btn-default
+{
+  text-decoration: none;
+  color: $primary-color;
+  font-weight: 500;
+  font-size: 1rem;
+  @include easeOut;
+
+  i{
+    margin-right: 1rem;
+    font-size: 0.6rem;
+  }
+
+  &:hover
+  {
+    color: #16769c;
+  }
+}
+
+//Flexed Items 
+.flexed
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+//SVG Icons
+.svg-icon
+{
+  width: 65px;
+  height: 65px;
+  fill: text-color(#fff);
+}
+
+/*-------------Start sectioning and bg----------------*/
+
+.vh
+{
+  min-height: 100vh !important;
+  
+}
+
+.white-bg
+{
+  background-color: white;
+}
+
+.light-bg
+{
+  background-color: $light-bg-color;
+  height: 100%;
+  position: relative;
+}
+
+.primary-bg
+{
+  background-color: $primary-color;
+}
+
+.dark-bg
+{
+  background-color: $dark-color;
+  height: 100%;
+}
+
+/*-------------End sectioning and bg----------------*/
+
+//Text alignement
+.text-center
+{
+  text-align: center;
+}
+
+.text-left
+{
+  text-align: left;
+}
+
+.text-right
+{
+  text-align: right;
+}
+
+// List
+.list
+{
+  list-style: none;
+}
+
+//Cards
+
+.card
+{
+  background-color: white;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  &-date 
+  {
+    span
+    {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &-day
+  {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $secondary_color;
+    margin-bottom: 8px;
+    @include easeOut;
+  }
+
+  &-month
+  {
+    background-color: $secondary_color;
+    border-radius: 0 0 8px 8px;
+    color: #fff;
+    text-align: center;
+    padding: 3px 10px;
+    font-weight: 300;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    width: 5rem;
+    @include easeOut;
+  }
+  &-comment-counter
+  {
+    font-size: 0.68rem;
+    color: $secondary_color;
+  }
+
+  .card-content
+  {
+    h3{
+      @include easeOut;
+    }
+  }
+
+  &:hover
+  {
+    .card-day
+    {
+      color: $primary-color;
+    }
+    .card-month
+    {
+      background-color: $primary-color;
+    }
+
+    .card-content
+    {
+      h3{
+        color: $primary-color;
+        
+      }
+    }
+  }
+
+}
+
+//Accordion
+
+.accordion
+{
+  max-width: 100%;
+
+  .accordion-contentBox
+  {
+    position: relative;
+   
+    .accordion-heading
+    {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 55px;
+      background-color: white;
+      cursor: pointer;
+
+      h3
+      {
+        padding: 40px 10px;
+      }
+      .according-arrow
+      {
+        display: flex;
+        color: $light-color;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 100%;
+        background-color: rgb(250, 250, 250);
+
+        i{
+          @include easeOut;
+
+          &.rotate
+          {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+    }
+
+    .accordion-content
+    { 
+      position: relative;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      padding-left: 1rem;
+      @include easeOut;
+
+      &.active
+      {
+        border-top: 1px solid rgba(158, 151, 151, 0.5);
+        border-bottom: 2px solid $primary-color;
+      }
+    }
+  }
+
+}
+
+//Hover animation
+
+.go-right
+{
+  
+  &:hover
+  {
+    margin-left: 8px;
+  }
+}
+
+/*********************************BreadCrumbs***********************************/
+
+.breadcrumbs
+{
+  margin-top: 1rem;
+  .breadcrumbs-list{
+    display: flex;
+    list-style: none;
+
+    .breadcrumb-item
+    {
+      font-size: clamp(0.8rem,2vw,1rem);
+      margin-right: 1.5rem;
+      a{
+        color: #fff;
+        text-decoration: none;
+      }
+
+      i{
+        font-size: 0.38rem;
+        color: #fff;
+        margin-right: 1rem;
+      }
+    }
+
+    .breadcrumb-item:last-child
+    {
+      opacity: 0.6;
+    }
+  }
+
+  // hide breadcrumbs in extra small screens
+
+  @include mediaXSm
+  {
+    display: none;
+  }
+
+  // hide breadcrumbs in small screens
+
+  @include mediaSm
+  {
+    display: none;
+  }
+
+}
+
+/********************************* Forms ***************************************/
+
+.form-group
+{
+  background: #fff;
+  position: relative;
+  height: 2.8rem;
+  width: 100%;
+  margin: 2rem 0;
+
+  .form-control
+  {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border: none;
+      outline: none;
+      background: transparent;
+      padding: 0.8rem;
+      font-size: 1rem;
+      font-weight: 600;
+      box-sizing: border-box;
+      color: $secondary_color;
+  }
+
+  label
+  {
+      position: absolute;
+      top: 20%;
+      left: 1px;
+      padding-left:0.8rem ;
+      display: inline-block;
+      font-size:1rem;
+      color: $secondary_color;
+      font-weight: 400;
+      @include easeOut;
+      pointer-events: none;
+  }
+
+  .form-control:focus + label,
+  .form-control:valid + label
+  {
+      transform: translate(-10px,-35px);
+      font-size: 0.8rem;
+  }
+
+  .form-control:focus
+  {
+    border: 2px solid $primary-color;
+  }
+}
+
+.default-form-group
+{
+  background: #fff;
+  position: relative;
+  height: 3.2rem;
+  width: 100%;
+  margin: 0.5rem 0;
+  border: 1px solid #d9d9da;
+
+  .form-control
+  {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border: none;
+      outline: none;
+      background: transparent;
+      padding: 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      box-sizing: border-box;
+      color: $secondary_color;
+  }
+
+  label
+  {
+      position: absolute;
+      top: 25%;
+      left: 3%;
+      letter-spacing: 1px;
+      padding-left:0.8rem ;
+      display: inline-block;
+      font-size:1rem;
+      color: $secondary_color;
+      font-weight: 400;
+      @include easeOut;
+      pointer-events: none;
+  }
+
+  .form-control:focus + label,
+  .form-control:valid + label
+  {
+      transform: translate(-10px,-35px);
+      font-size: 0.8rem;
+  }
+
+  .form-control:focus
+  {
+    border: 2px solid $primary-color;
+  }
+}
+
+
+/**************************************blockquot*************************************/
+
+blockquote
+{
+  color: text-color($primary-color);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(0.8rem,3vw,1rem);
+  text-align: left;
+}
+
+
+/******************************** Pagination ***************************************/
+
+.pagination-container
+{
+  .pagination-list
+  {
+    .pagination-item
+    {
+      margin: 0 1rem;
+      @include easeOut;
+
+      .pagination-link{
+        font-weight: 400 ;
+      }
+
+      &.active
+      {
+        border-bottom: 3px solid $primary-color;
+      }
+
+      &:hover
+      {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+/************************************ Table ****************************/
+
+.table
+{
+
+  // Vertically stacked in mobile divices
+
+  width: 100%;
+  th{
+    color: $secondary_color;
+    font-weight: 400;
+    padding: 0.5rem 0 0.5rem 0;
+    word-break: break-all;
+    text-align: left;
+    background-color: $dark-color;
+  }
+
+  tr{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  td {
+    word-break: break-all;
+    text-align: left;
+    padding: 0.5rem 0 0.5rem 0;
+  }
+
+  // Horizontally stacked in tablet/laptop/wide divices
+
+  @include mediaMd{
+    tr{
+      flex-direction: row;
+    }
+    th{
+      width: 50%;
+      background-color: transparent;
+    }
+    td{
+      width: 50%;
+    }
+  }
+
+  @include mediaLg{
+    tr{
+      flex-direction: row;
+    }
+    th{
+      width: 50%;
+      background-color: transparent;
+    }
+    td{
+      width: 50%;
+    }
+  }
+
+  @include mediaXlg{
+    tr{
+      flex-direction: row;
+    }
+    th{
+      width: 50%;
+      background-color: transparent;
+    }
+    td{
+      width: 50%;
+    }
+  }
+  
+  
+}

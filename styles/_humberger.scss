@@ -1,0 +1,63 @@
+.humberger
+{
+  position: fixed;
+  right: 2%;
+  top: 2%;
+  z-index: 9999;
+  cursor: pointer;
+  @include easeOut;
+  visibility: hidden;
+  &::before
+  {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background: $primary-color;
+    position: absolute;
+    border-radius: 0 0 0 100%;
+    right: -15px;
+    top: -30px;
+    z-index: -1;
+  }
+  .line
+  {
+    width: 30px;
+    height: 3px;
+    background: text-color($primary-color);
+    margin-bottom: 4px;
+  }
+
+  &.close{
+    transform:rotate(180deg);
+
+    .line{
+
+      //line one rotate
+
+      &:nth-child(1)
+      {
+        transform: rotate(45deg) translate(5px,5px);
+      }
+
+      //line two delete
+
+      &:nth-child(2)
+      {
+        opacity: 0;
+      }
+
+      //line three rotate
+
+      &:nth-child(3)
+      {
+        transform: rotate(-45deg) translate(5px, -4px);
+
+      }
+
+
+
+    }
+
+  }
+
+}
